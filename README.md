@@ -8,6 +8,7 @@ Agenda
   * [Usage of Bio-Formats](BioFormats.ipynb)
   * [Read Image Data using Python](ImageFormat.ipynb)
   * [Create virtual environment](Setup.md)
+  * [Work with Conda](Setup.md)
 
 * Day 3
   * [Explore Dask](Dask.ipynb)
@@ -16,3 +17,4 @@ Agenda
 * Day 4
   * [Read data from IDR](ReadingData_fromIDR.ipynb)
   * [Combine data from public resources](PublicResources.ipynb)
+  * [Search within IDR - create queries](HPA.ipynb)

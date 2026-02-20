@@ -42,7 +42,7 @@ conda create -n <env-name> python==3.10.0 numpy pandas
 
 To ensure **reproducibility**, it is recommended to declare the dependencies with the desired version in an ``environment.yml`` file.
 
-You can find such files either in BioImage Model Zoo, e.g. if you download the [merry-gorilla cellpose example](https://bioimage.io/#/artifacts/merry-gorilla)) or a simpler one in [this repository](./environment_reading.yml).
+You can find such files either in BioImage Model Zoo, e.g. if you download the [merry-gorilla cellpose example](https://bioimage.io/#/artifacts/merry-gorilla) or a simpler one in [this repository](./environment_reading.yml).
 
 - The ``name`` parameter is the name given to the environment, if no name is set, a name will be dynamically assigned.
 - The ``channels`` section describes the repository to retrieve the packages from.

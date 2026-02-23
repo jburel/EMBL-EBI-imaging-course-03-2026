@@ -9,7 +9,8 @@ dependencies:
   - conda-forge::ipywidgets==8.0.4
   - pip
   - ipykernel
-  - ftputil  # added only for downloaded file from idr
+# Commenting out as ftputil does not install in provided VM
+#  - ftputil  # added only for downloaded file from idr
   - pip:
     - jupyter==1.0.0
     - matplotlib==3.8.4

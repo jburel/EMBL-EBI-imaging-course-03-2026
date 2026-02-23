@@ -37,7 +37,7 @@ conda create -n <env-name> # <env-name> is the name of the environment you want 
 To add packages and indicate a version while creating an environment, specify them after the environment name:
 
 ```
-conda create -n <env-name> python==3.10.0 numpy pandas
+conda create -n <env-name> python==3.12.0 numpy pandas
 ```
 
 To ensure **reproducibility**, it is recommended to declare the dependencies with the desired version in an ``environment.yml`` file.
@@ -60,4 +60,14 @@ Note that on OS X arm64 Apple Silicon, you may have to run:
 
 ```
 CONDA_SUBDIR=osx-64 conda env create -f <env-file>.yml
+```
+
+### Running in provided VMs in conda
+**Note**: after the ``jupyter notebook`` cmd, a dialog might appear asking for username and password. Just click `Cancel` to close it.
+```
+git clone https://github.com/ome/EMBL-EBI-imaging-course-03-2026.git
+cd EMBL-EBI-imaging-course-03-2026
+conda env create -f <env-file>.yml # replace with the name of the env file present in the repo
+python -m ipykernel install --user --name imaging_course_2026
+jupyter notebook
 ```

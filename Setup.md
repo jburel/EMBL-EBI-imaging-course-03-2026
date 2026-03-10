@@ -1,7 +1,7 @@
 # Notebooks
 For the Jupyter notebooks, navigate to the particular notebook e.g. [ImageFormat notebook](https://github.com/ome/EMBL-EBI-imaging-course-04-2026/blob/main/ImageFormat.ipynb) and click on the ``Colab`` badge.
 
-Note that the [Bio-Formats notebook](https://github.com/ome/EMBL-EBI-imaging-course-04-2026/blob/main/BioFormats.ipynb) cannot be run in Colab, instead, read the text and execute on the command line as appropriate.
+Note that the [Bio-Formats notebook](https://github.com/ome/EMBL-EBI-imaging-course-04-2026/blob/main/BioFormats.ipynb) can be run neither in Colab nor in conda as build using the env file below, instead, read the text and execute on the command line as appropriate.
 
 # Install Python Virtual Environment (venv)
 For some exercises, installation of ``venv`` is necessary.
@@ -37,12 +37,12 @@ conda create -n <env-name> # <env-name> is the name of the environment you want 
 To add packages and indicate a version while creating an environment, specify them after the environment name:
 
 ```
-conda create -n <env-name> python==3.10.0 numpy pandas
+conda create -n <env-name> python==3.12.0 numpy pandas
 ```
 
 To ensure **reproducibility**, it is recommended to declare the dependencies with the desired version in an ``environment.yml`` file.
 
-You can find such files either in BioImage Model Zoo (link to Fish Cellpose model) or in this repository.
+You can find such files either in BioImage Model Zoo, e.g. if you download the [merry-gorilla cellpose example](https://bioimage.io/#/artifacts/merry-gorilla) or a simpler one in [this repository](./environment_reading.yml).
 
 - The ``name`` parameter is the name given to the environment, if no name is set, a name will be dynamically assigned.
 - The ``channels`` section describes the repository to retrieve the packages from.
@@ -60,4 +60,14 @@ Note that on OS X arm64 Apple Silicon, you may have to run:
 
 ```
 CONDA_SUBDIR=osx-64 conda env create -f <env-file>.yml
+```
+
+### Running in provided VMs in conda
+**Note**: after the ``jupyter notebook`` cmd, a dialog might appear asking for username and password. Just click `Cancel` to close it.
+```
+git clone https://github.com/ome/EMBL-EBI-imaging-course-03-2026.git
+cd EMBL-EBI-imaging-course-03-2026
+conda env create -f <env-file>.yml # replace with the name of the env file present in the repo
+python -m ipykernel install --user --name imaging_course_2026
+jupyter notebook
 ```

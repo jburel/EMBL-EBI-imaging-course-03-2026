@@ -1,0 +1,18 @@
+# Basic environment file for ReadingData_fromIDR.ipynb
+name: imaging_course_2026
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - python==3.12.*
+  - conda-forge::ipywidgets==8.0.4
+  - pip
+  - ipykernel
+# Commenting out as ftputil does not install in provided VM
+#  - ftputil  # added only for downloaded file from idr
+  - pip:
+    - jupyter==1.0.0
+    - matplotlib==3.8.4
+    - scikit-image==0.26.0
+    - bioio==3.2.0

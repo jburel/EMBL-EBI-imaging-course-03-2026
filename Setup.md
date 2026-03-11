@@ -3,7 +3,7 @@ For the Jupyter notebooks, navigate to the particular notebook e.g. [ImageFormat
 
 Note that the [Bio-Formats notebook](https://github.com/ome/EMBL-EBI-imaging-course-04-2026/blob/main/BioFormats.ipynb) can be run neither in Colab nor in conda as build using the env file below, instead, read the text and execute on the command line as appropriate.
 
-# Install Python Virtual Environment (venv)
+## Install Python Virtual Environment (venv)
 For some exercises, installation of ``venv`` is necessary.
 
 Create the new environment:
